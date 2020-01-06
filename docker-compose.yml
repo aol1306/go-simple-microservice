@@ -1,0 +1,17 @@
+version: "3"
+networks: 
+    net:
+
+services:
+    backend:
+        build: backend # path
+        ports:
+            - "8080:8080"
+        networks:
+            - net
+    frontend:
+        build: frontend # path
+        ports:
+            - "80:80"
+        networks:
+            - net
